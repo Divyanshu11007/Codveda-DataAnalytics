@@ -13,8 +13,11 @@ nltk.download('stopwords', quiet=True)
 nltk.download('punkt', quiet=True)
 nltk.download('punkt_tab', quiet=True)
 
+# Toggle: comment/uncomment the DATA/OUT lines for Colab vs local run
 DATA = r'/content'
+# DATA = r'C:\Users\ASUS\Downloads\DataSet_Extracted\Data Set For Task'
 OUT = r'/content'
+# OUT = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 3\Task 3'
 
 # ---- Load sentiment dataset ----
 df = pd.read_csv(f'{DATA}/3) Sentiment dataset.csv')

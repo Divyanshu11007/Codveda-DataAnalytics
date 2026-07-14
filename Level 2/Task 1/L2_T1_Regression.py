@@ -8,8 +8,11 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 # Update DATA and OUT paths for Colab environment
 # You will need to upload '4) house Prediction Data Set.csv' to the /content/ directory in Colab.
+# Toggle: comment/uncomment the DATA/OUT lines for Colab vs local run
 DATA = r'/content'
+# DATA = r'C:\Users\ASUS\Downloads\DataSet_Extracted\Data Set For Task'
 OUT = r'/content'
+# OUT = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 2\Task 1'
 
 # ---- Load & parse house data (space-separated, no header) ----
 # Changed path separator to '/' for Colab compatibility

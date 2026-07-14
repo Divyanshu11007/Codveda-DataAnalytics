@@ -10,8 +10,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import (accuracy_score, precision_score, recall_score,
                              f1_score, confusion_matrix, classification_report)
 
+# Toggle: comment/uncomment the DATA/OUT lines for Colab vs local run
 DATA = r'/content'
+# DATA = r'C:\Users\ASUS\Downloads\DataSet_Extracted\Data Set For Task\Churn Prdiction Data'
 OUT = r'/content'
+# OUT = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 3\Task 1'
 
 # ---- Load data ----
 df = pd.read_csv(f'{DATA}/churn-bigml-80.csv')

@@ -3,8 +3,11 @@ import numpy as np
 
 # Update DATA and OUT paths for Colab environment
 # You will need to upload '1) iris.csv' to the /content/ directory in Colab if you want to re-run the original cleaning.
+# Toggle: comment/uncomment the DATA/OUT lines for Colab vs local run
 DATA = r'/content'
+# DATA = r'C:\Users\ASUS\Downloads\DataSet_Extracted\Data Set For Task'
 OUT = r'/content'
+# OUT = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 1\Task 1'
 
 # ---- Load dataset ----
 # Modified to load the existing cleaned file since '1) iris.csv' is missing.

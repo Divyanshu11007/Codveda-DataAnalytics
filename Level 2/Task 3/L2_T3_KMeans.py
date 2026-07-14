@@ -5,8 +5,11 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 
+# Toggle: comment/uncomment the DATA/OUT lines for Colab vs local run
 DATA = r'/content'
+# DATA = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 1\Task 1'
 OUT = r'/content'
+# OUT = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 2\Task 3'
 
 df = pd.read_csv(f'{DATA}/1) iris_cleaned.csv')
 print('=== Iris Dataset for Clustering ===')
