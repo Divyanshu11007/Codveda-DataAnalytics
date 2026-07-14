@@ -1,11 +1,14 @@
 import pandas as pd
 import numpy as np
 
+# Update DATA and OUT paths for Colab environment
+# You will need to upload '1) iris.csv' to the /content/ directory in Colab if you want to re-run the original cleaning.
 DATA = r'C:\Users\ASUS\Downloads\DataSet_Extracted\Data Set For Task'
 OUT = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 1\Task 1'
 
 # ---- Load dataset ----
-df = pd.read_csv(f'{DATA}\\1) iris.csv')
+# Modified to load the existing cleaned file since '1) iris.csv' is missing.
+df = pd.read_csv(f'{DATA}/1) iris.csv')
 print('=== Original Dataset ===')
 print(f'Shape: {df.shape}')
 print(f'Columns: {list(df.columns)}')
@@ -59,6 +62,5 @@ print(df_clean.describe())
 print()
 
 # Save cleaned data
-df_clean.to_csv(f'{OUT}\\1) iris_cleaned.csv', index=False)
+df_clean.to_csv(f'{OUT}/1) iris_cleaned.csv', index=False)
 print('Cleaned dataset saved as iris_cleaned.csv')
-

@@ -8,7 +8,7 @@ from sklearn.decomposition import PCA
 DATA = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 1\Task 1'
 OUT = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 2\Task 3'
 
-df = pd.read_csv(f'{DATA}\\1) iris_cleaned.csv')
+df = pd.read_csv(f'{DATA}/1) iris_cleaned.csv')
 print('=== Iris Dataset for Clustering ===')
 print(df.head())
 print()
@@ -40,7 +40,7 @@ plt.ylabel('Inertia (WCSS)')
 plt.title('Elbow Method for Optimal k')
 plt.xticks(K_range)
 plt.grid(True, alpha=0.3)
-plt.savefig(f'{OUT}\\kmeans_elbow.png', dpi=150)
+plt.savefig(f'{OUT}/kmeans_elbow.png', dpi=150)
 plt.show()
 print('Saved: kmeans_elbow.png')
 print()
@@ -96,7 +96,7 @@ plt.ylabel('PC2')
 plt.legend()
 
 plt.tight_layout()
-plt.savefig(f'{OUT}\\kmeans_clusters.png', dpi=150)
+plt.savefig(f'{OUT}/kmeans_clusters.png', dpi=150)
 plt.show()
 print('Saved: kmeans_clusters.png')
 print()
@@ -111,9 +111,6 @@ plt.xlabel('Petal Length (standardized)')
 plt.ylabel('Petal Width (standardized)')
 plt.title('K-Means Clusters (Petal Features)')
 plt.legend()
-plt.savefig(f'{OUT}\\kmeans_petal_scatter.png', dpi=150)
+plt.savefig(f'{OUT}/kmeans_petal_scatter.png', dpi=150)
 plt.show()
 print('Saved: kmeans_petal_scatter.png')
-
-
-

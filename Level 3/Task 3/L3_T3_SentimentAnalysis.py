@@ -1,3 +1,6 @@
+import sys
+import io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,7 +20,7 @@ DATA = r'C:\Users\ASUS\Downloads\DataSet_Extracted\Data Set For Task'
 OUT = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 3\Task 3'
 
 # ---- Load sentiment dataset ----
-df = pd.read_csv(f'{DATA}\\3) Sentiment dataset.csv')
+df = pd.read_csv(f'{DATA}/3) Sentiment dataset.csv')
 print(f'Shape: {df.shape}')
 print(f'Columns: {list(df.columns)}')
 print()
@@ -105,7 +108,7 @@ axes[1].set_ylabel('Count')
 axes[1].tick_params(axis='x', rotation=0)
 
 plt.tight_layout()
-plt.savefig(f'{OUT}\\sentiment_distribution.png', dpi=150)
+plt.savefig(f'{OUT}/sentiment_distribution.png', dpi=150)
 plt.show()
 print('Saved: sentiment_distribution.png')
 print()
@@ -129,7 +132,7 @@ plt.title('Polarity by Sentiment Class')
 plt.legend()
 
 plt.tight_layout()
-plt.savefig(f'{OUT}\\sentiment_polarity.png', dpi=150)
+plt.savefig(f'{OUT}/sentiment_polarity.png', dpi=150)
 plt.show()
 print('Saved: sentiment_polarity.png')
 print()
@@ -154,7 +157,7 @@ try:
             ax.axis('off')
 
     plt.tight_layout()
-    plt.savefig(f'{OUT}\\sentiment_wordclouds.png', dpi=150)
+    plt.savefig(f'{OUT}/sentiment_wordclouds.png', dpi=150)
     plt.show()
     print('Saved: sentiment_wordclouds.png')
 except ImportError:
@@ -170,6 +173,3 @@ for sent in ['positive', 'negative', 'neutral']:
     print(f'\n{sent.capitalize()}:')
     for word, count in top_words:
         print(f'  {word}: {count}')
-
-
-

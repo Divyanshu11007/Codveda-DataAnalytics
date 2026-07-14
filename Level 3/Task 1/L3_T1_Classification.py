@@ -14,7 +14,7 @@ DATA = r'C:\Users\ASUS\Downloads\DataSet_Extracted\Data Set For Task\Churn Prdic
 OUT = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 3\Task 1'
 
 # ---- Load data ----
-df = pd.read_csv(f'{DATA}\\churn-bigml-80.csv')
+df = pd.read_csv(f'{DATA}/churn-bigml-80.csv')
 print(f'Shape: {df.shape}')
 print(f'Columns: {list(df.columns)}')
 print()
@@ -96,7 +96,7 @@ plt.ylabel('Score')
 plt.ylim(0, 1)
 plt.legend(loc='lower right')
 plt.tight_layout()
-plt.savefig(f'{OUT}\\churn_model_comparison.png', dpi=150)
+plt.savefig(f'{OUT}/churn_model_comparison.png', dpi=150)
 plt.show()
 print('Saved: churn_model_comparison.png')
 print()
@@ -134,7 +134,7 @@ plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.title('Confusion Matrix - Tuned Random Forest')
 plt.tight_layout()
-plt.savefig(f'{OUT}\\churn_confusion_matrix.png', dpi=150)
+plt.savefig(f'{OUT}/churn_confusion_matrix.png', dpi=150)
 plt.show()
 print('Saved: churn_confusion_matrix.png')
 print()
@@ -150,9 +150,6 @@ plt.xlabel('Importance')
 plt.title('Top 10 Feature Importances - Random Forest')
 plt.gca().invert_yaxis()
 plt.tight_layout()
-plt.savefig(f'{OUT}\\churn_feature_importance.png', dpi=150)
+plt.savefig(f'{OUT}/churn_feature_importance.png', dpi=150)
 plt.show()
 print('Saved: churn_feature_importance.png')
-
-
-

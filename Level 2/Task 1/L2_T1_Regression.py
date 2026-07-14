@@ -6,11 +6,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
+# Update DATA and OUT paths for Colab environment
+# You will need to upload '4) house Prediction Data Set.csv' to the /content/ directory in Colab.
 DATA = r'C:\Users\ASUS\Downloads\DataSet_Extracted\Data Set For Task'
 OUT = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 2\Task 1'
 
 # ---- Load & parse house data (space-separated, no header) ----
-raw = pd.read_csv(f'{DATA}\\4) house Prediction Data Set.csv', header=None, sep=r'\s+')
+# Changed path separator to '/' for Colab compatibility
+raw = pd.read_csv(f'{DATA}/4) house Prediction Data Set.csv', header=None, sep=r'\s+')
 print(f'Raw shape: {raw.shape}')
 print('First 5 rows:')
 print(raw.head())
@@ -58,7 +61,7 @@ axes[1, 1].set_ylabel('MEDV ($1000s)')
 axes[1, 1].set_title('LSTAT vs MEDV')
 
 plt.tight_layout()
-plt.savefig(f'{OUT}\\house_eda.png', dpi=150)
+plt.savefig(f'{OUT}/house_eda.png', dpi=150)
 plt.show()
 print('Saved: house_eda.png')
 print()
@@ -105,7 +108,7 @@ plt.ylabel('Predicted MEDV ($1000s)')
 plt.title('Actual vs Predicted House Prices')
 plt.legend()
 plt.tight_layout()
-plt.savefig(f'{OUT}\\house_regression_results.png', dpi=150)
+plt.savefig(f'{OUT}/house_regression_results.png', dpi=150)
 plt.show()
 print('Saved: house_regression_results.png')
 
@@ -124,9 +127,6 @@ plt.hist(residuals, bins=20, edgecolor='black', color='steelblue')
 plt.xlabel('Residual')
 plt.title('Residual Distribution')
 plt.tight_layout()
-plt.savefig(f'{OUT}\\house_residuals.png', dpi=150)
+plt.savefig(f'{OUT}/house_residuals.png', dpi=150)
 plt.show()
 print('Saved: house_residuals.png')
-
-
-
