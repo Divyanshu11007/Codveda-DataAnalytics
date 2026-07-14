@@ -10,8 +10,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import (accuracy_score, precision_score, recall_score,
                              f1_score, confusion_matrix, classification_report)
 
-DATA = r'C:\Users\ASUS\Downloads\DataSet_Extracted\Data Set For Task\Churn Prdiction Data'
-OUT = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 3\Task 1'
+DATA = r'/content'
+OUT = r'/content'
 
 # ---- Load data ----
 df = pd.read_csv(f'{DATA}/churn-bigml-80.csv')

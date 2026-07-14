@@ -5,8 +5,8 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 
-DATA = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 1\Task 1'
-OUT = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 2\Task 3'
+DATA = r'/content'
+OUT = r'/content'
 
 df = pd.read_csv(f'{DATA}/1) iris_cleaned.csv')
 print('=== Iris Dataset for Clustering ===')

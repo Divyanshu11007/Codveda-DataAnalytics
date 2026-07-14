@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Update DATA and OUT paths for Colab environment
-DATA = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 1\Task 1'
-OUT = r'C:\Users\ASUS\Downloads\CodeVeda_Internship_Projects\Level 1\Task 2'
+DATA = r'/content'
+OUT = r'/content'
 
 df = pd.read_csv(f'{DATA}/1) iris_cleaned.csv')
 
